@@ -133,7 +133,7 @@ class Foot:
 class Human(Mammal):
     def __init__(self, name, age, gender, breed, color, weight, height, numberofvertebras, numberoffingers, address):
         super().__init__(name, age, gender, breed, color, weight, height, numberofvertebras)
-        self.numberoffingers = numberoffingers
+        self.numberoffingers = numberoffingers   # Aggregation
         self.__address = address   # Private attribute
     
     def speak(self):
@@ -154,10 +154,12 @@ class Dog(Mammal):
     def __init__(self, name, age, gender, breed, color, weight, height, numberofvertebras, heartValves):
         super().__init__(name, age, gender, breed, color, weight, height, numberofvertebras)
         self.heartValves = heartValves
-        self.heartObject = Heart(self.heartValves)
+        self.heartObject = Heart(self.heartValves)    # Composition
         
     def speak(self):
         return "Woof!"   # Polymorphism
 
     def display(self):
         print("No of Heart Valves: ", self.heartObject.display())
+        
+# finish HW01
