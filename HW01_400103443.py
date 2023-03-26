@@ -23,3 +23,48 @@ class Animal:
     
     def colordescription(self):
         return f"my color is {self.color}"
+       
+#Inheritance
+class Invertebrate(Animal):
+    def __init__(self, name, age, gender, breed, color, weight, length):
+        super().__init__(name, age, gender, breed, color)
+        self.weigh = weight
+        self.length = length
+        
+    def weightdescription(self):
+        return f"my breed is {self.weight}"
+    
+    def lengthdescription(self):
+        return f"my color is {self.length}"
+    
+class Worm(Invertebrate):
+    def __init__(self, name, age, gender, breed, color, weight, length, location):
+        super().__init__(name, age, gender, breed, color, weight, length)
+        self.location = location
+        
+    def locationdescription(self):
+        return f"my breed is {self.location}"
+    
+class Mollusc(Invertebrate):
+    def __init__(self, name, age, gender, breed, color, weight, length, location):
+        super().__init__(name, age, gender, breed, color, weight, length)
+        self.location = location
+        
+    def locationdescription(self):
+        return f"my breed is {self.location}"
+
+class Echinoderm(Invertebrate):
+    def __init__(self, name, age, gender, breed, color, weight, length, location):
+        super().__init__(name, age, gender, breed, color, weight, length)
+        self.location = location
+        
+    def locationdescription(self):
+        return f"my breed is {self.location}"
+
+class Arthropod(Invertebrate):
+    def __init__(self, name, age, gender, breed, color, weight, length, location):
+        super().__init__(name, age, gender, breed, color, weight, length)
+        self.location = location
+        
+    def locationdescription(self):
+        return f"my breed is {self.location}"
