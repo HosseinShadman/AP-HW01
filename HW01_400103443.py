@@ -141,3 +141,23 @@ class Human(Mammal):
     
     def display(self):
         print("No of foot fingers: ", foot.display())
+        
+#Composition and Polymorphism
+class Heart:
+    def __init__(self, heartValves):
+        self.heartValves = heartValves
+        
+    def display(self):
+        return self.heartValves
+
+class Dog(Mammal):
+    def __init__(self, name, age, gender, breed, color, weight, height, numberofvertebras, heartValves):
+        super().__init__(name, age, gender, breed, color, weight, height, numberofvertebras)
+        self.heartValves = heartValves
+        self.heartObject = Heart(self.heartValves)
+        
+    def speak(self):
+        return "Woof!"   # Polymorphism
+
+    def display(self):
+        print("No of Heart Valves: ", self.heartObject.display())
