@@ -121,3 +121,23 @@ class Mammal(Vertebrate):
         
     def numberofvertebrasdescription(self):
         return f"I have {self.numberofvertebras} vertebras"
+    
+#Aggregation and Encapsulation
+class Foot:
+    def __init__(self, numberoffingers):
+        self.numberoffingers = numberoffingers
+        
+    def display(self):
+        return self.numberoffingers
+
+class Human(Mammal):
+    def __init__(self, name, age, gender, breed, color, weight, height, numberofvertebras, numberoffingers, address):
+        super().__init__(name, age, gender, breed, color, weight, height, numberofvertebras)
+        self.numberoffingers = numberoffingers
+        self.__address = address   # Private attribute
+    
+    def speak(self):
+        return "Hello!"
+    
+    def display(self):
+        print("No of foot fingers: ", foot.display())
