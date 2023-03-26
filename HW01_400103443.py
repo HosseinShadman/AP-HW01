@@ -68,3 +68,56 @@ class Arthropod(Invertebrate):
         
     def locationdescription(self):
         return f"my location is {self.location}"
+
+#Inheritance
+class Vertebrate(Animal):
+    def __init__(self, name, age, gender, breed, color, weight, height):
+        super().__init__(name, age, gender, breed, color)
+        self.weigh = weight
+        self.height = height
+        
+    def weightdescription(self):
+        return f"my weight is {self.weight}"
+    
+    def heightdescription(self):
+        return f"my height is {self.height}"
+
+class Fish(Vertebrate):
+    def __init__(self, name, age, gender, breed, color, weight, height, numberofvertebras):
+        super().__init__(name, age, gender, breed, color, weight, height)
+        self.numberofvertebras = numberofvertebras
+        
+    def numberofvertebrasdescription(self):
+        return f"I have {self.numberofvertebras} vertebras"
+    
+class Bird(Vertebrate):
+    def __init__(self, name, age, gender, breed, color, weight, height, numberofvertebras):
+        super().__init__(name, age, gender, breed, color, weight, height)
+        self.numberofvertebras = numberofvertebras
+        
+    def numberofvertebrasdescription(self):
+        return f"I have {self.numberofvertebras} vertebras"
+
+class Reptiles(Vertebrate):
+    def __init__(self, name, age, gender, breed, color, weight, height, numberofvertebras):
+        super().__init__(name, age, gender, breed, color, weight, height)
+        self.numberofvertebras = numberofvertebras
+        
+    def numberofvertebrasdescription(self):
+        return f"I have {self.numberofvertebras} vertebras"
+
+class Amphibian(Vertebrate):
+    def __init__(self, name, age, gender, breed, color, weight, height, numberofvertebras):
+        super().__init__(name, age, gender, breed, color, weight, height)
+        self.numberofvertebras = numberofvertebras
+        
+    def numberofvertebrasdescription(self):
+        return f"I have {self.numberofvertebras} vertebras"
+    
+class Mammal(Vertebrate):
+    def __init__(self, name, age, gender, breed, color, weight, height, numberofvertebras):
+        super().__init__(name, age, gender, breed, color, weight, height)
+        self.numberofvertebras = numberofvertebras
+        
+    def numberofvertebrasdescription(self):
+        return f"I have {self.numberofvertebras} vertebras"
